@@ -13,129 +13,160 @@
   <meta property="og:title" content="Lumora • AI + IoT-powered infrastructure decarbonization">
   <meta property="og:description" content="We fuse satellite, in-situ sensors and ops data to cut emissions across critical infrastructure.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cattr91.github.io/lumora-landing-page/img/hero-bg.jpg"> <!-- og-image.jpg" -->
+  <meta property="og:image" content="https://cattr91.github.io/lumora-landing-page/img/hero-bg.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Preload hero (swap filename if needed) -->
+  <!-- Preload hero -->
   <link rel="preload" as="image" href="./img/hero-bg.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
+    /* Animations */
     .fade-in { animation: fade 0.6s ease-in-out both; }
     @keyframes fade { from {opacity:.0; transform: translateY(6px)} to {opacity:1; transform:none} }
+    @media (prefers-reduced-motion: reduce) { .fade-in { animation: none !important; } }
 
-    @media (prefers-reduced-motion: reduce) {
-      .fade-in { animation: none !important; }
+    /* Your dark palette utilities */
+    body {
+      background-color: #111827; /* gray-900 */
+      color: #f3f4f6;            /* gray-100 */
+    }
+    section { border-color: #1f2937; /* gray-800 */ }
+    .card-dark {
+      background-color: #1f2937; /* gray-800 */
+      border-color: #374151;     /* gray-700 */
+      color: #f3f4f6;
+    }
+    .input-dark {
+      background-color: #111827; /* gray-900 */
+      color: #f3f4f6;            /* gray-100 */
+      border: 1px solid #374151; /* gray-700 */
+    }
+    .input-dark::placeholder { color: #9CA3AF; } /* gray-400 */
+    .btn-glow {
+      background-color:#0EA5E9; /* sky-500-ish */
+      color: #fff;
+      box-shadow: 0 0 0 0 rgba(14,165,233,0.0);
+      transition: box-shadow .25s ease, transform .05s ease, background-color .2s ease;
+    }
+    .btn-glow:hover {
+      background-color:#38BDF8; /* sky-400-ish */
+      box-shadow: 0 8px 28px rgba(14,165,233,0.25);
+    }
+    .btn-glow:active { transform: translateY(1px); }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.15);
+      background: transparent;
+      color: #E5E7EB; /* gray-200 */
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 6px 20px rgba(255,255,255,.08);
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+
+<body class="bg-gray-900 text-gray-100">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+  <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-2">
-        <!-- <img
-          src="./lumora.png"
-          alt="Lumora"
-          width="24" height="24"
-          class="h-6 w-6 rounded"
-          decoding="async" loading="eager" /> -->
         <span class="font-semibold">Lumora</span>
       </a>
       <nav class="hidden sm:flex gap-6 text-sm" aria-label="Primary">
-        <a href="#what" class="hover:text-blue-700">Services</a>
-        <a href="#pricing" class="hover:text-blue-700">Prices</a>
-        <a href="#team" class="hover:text-blue-700">Team</a>
-        <a href="#contact" class="hover:text-blue-700">Contact</a>
+        <a href="#what" class="hover:text-blue-300">Services</a>
+        <a href="#pricing" class="hover:text-blue-300">Prices</a>
+        <a href="#team" class="hover:text-blue-300">Team</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
       </nav>
-      <a href="#contact" class="hidden sm:inline-block text-white text-sm px-4 py-2 rounded-lg"
-        style="background-color:#0EA5E9">Get in touch</a>
+      <a href="#contact" class="hidden sm:inline-block text-sm px-4 py-2 rounded-lg btn-glow">Get in touch</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="top" class="relative isolate">
+  <section id="top" class="relative isolate border-b border-gray-800">
     <div class="absolute inset-0 -z-10">
       <img src="./img/hero-bg.png" alt="Solar and grid infrastructure at dusk" class="w-full h-full object-cover" fetchpriority="high">
-      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 bg-black/70"></div>
     </div>
     <div class="max-w-6xl mx-auto px-4 py-32 text-white">
       <div class="max-w-3xl fade-in">
         <h1 class="text-5xl font-bold leading-tight">Lumora</h1>
         <p class="mt-3 text-2xl font-medium text-blue-200">AI + IoT-powered infrastructure decarbonization</p>
-        <p class="mt-4 text-lg text-gray-100">We fuse satellite, in-situ sensors and operational data to identify, quantify and reduce emissions across critical infrastructure.</p>
-        <a href="#what" class="inline-block mt-8 bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700">Explore services</a>
+        <p class="mt-4 text-lg text-gray-200">We fuse satellite, in-situ sensors and operational data to identify, quantify and reduce emissions across critical infrastructure.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#what" class="inline-block px-6 py-3 rounded-xl btn-glow">Explore services</a>
+          <a href="#pricing" class="inline-block px-6 py-3 rounded-xl btn-outline">See pricing</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Services (as cards) -->
-  <section id="what" class="border-t bg-white">
+  <section id="what" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-16 text-center">
       <h2 class="text-2xl font-bold">Our Services</h2>
-      <p class="text-gray-600 mt-2">We combine geospatial analytics, IoT data and AI to accelerate infrastructure decarbonization.</p>
+      <p class="text-gray-400 mt-2">We combine geospatial analytics, IoT data and AI to accelerate infrastructure decarbonization.</p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Card 1 -->
-        <div class="bg-white border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition p-4">
-          <img src="./img/service1.png" alt="Emissions intelligence"      width="640" height="320" loading="lazy"
-          class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold">Emissions Intelligence</h3>
-          <p class="text-sm text-gray-600 mt-2">Portfolio-scale insights on carbon, methane and electrification potential using multi-source data.</p>
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service1.png" alt="Emissions intelligence" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Emissions Intelligence</h3>
+          <p class="text-sm text-gray-400 mt-2">Portfolio-scale insights on carbon, methane and electrification potential using multi-source data.</p>
         </div>
         <!-- Card 2 -->
-        <div class="bg-white border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition p-4">
-          <img src="./img/service2.png" alt="Predictive maintenance"      width="640" height="320" loading="lazy"
-          class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold">Predictive Maintenance</h3>
-          <p class="text-sm text-gray-600 mt-2">AI models forecast infrastructure stress, helping reduce downtime and extend asset life.</p>
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service2.png" alt="Predictive maintenance" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Predictive Maintenance</h3>
+          <p class="text-sm text-gray-400 mt-2">AI models forecast infrastructure stress, helping reduce downtime and extend asset life.</p>
         </div>
         <!-- Card 3 -->
-        <div class="bg-white border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition p-4">
-          <img src="./img/service3.png" alt="MRV-grade reporting"      width="640" height="320" loading="lazy"
-          class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold">MRV-Grade Reporting</h3>
-          <p class="text-sm text-gray-600 mt-2">Automated, audit-ready reports compatible with sustainability frameworks and regulators.</p>
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service3.png" alt="MRV-grade reporting" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">MRV-Grade Reporting</h3>
+          <p class="text-sm text-gray-400 mt-2">Automated, audit-ready reports compatible with sustainability frameworks and regulators.</p>
         </div>
         <!-- Card 4 -->
-        <div class="bg-white border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition p-4">
-          <img src="./img/service4.png" alt="Optimization actions"      width="640" height="320" loading="lazy"
-          class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold">Optimization Actions</h3>
-          <p class="text-sm text-gray-600 mt-2">Translate insights into real-world actions: retrofits, grid balancing and efficiency upgrades.</p>
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service4.png" alt="Optimization actions" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Optimization Actions</h3>
+          <p class="text-sm text-gray-400 mt-2">Translate insights into real-world actions: retrofits, grid balancing and efficiency upgrades.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="border-t bg-gray-50">
+  <section id="pricing" class="border-t border-gray-800 bg-gray-950">
     <div class="max-w-6xl mx-auto px-4 py-16 text-center">
       <h2 class="text-2xl font-bold">Pricing Model</h2>
-      <p class="text-gray-600 mt-2">Flexible options designed to match client scale and data maturity.</p>
+      <p class="text-gray-400 mt-2">Flexible options designed to match client scale and data maturity.</p>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
-        <div class="bg-white border rounded-2xl shadow-sm hover:shadow-md transition p-6">
-          <h3 class="text-lg font-semibold">Starter</h3>
+        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
+          <h3 class="text-lg font-semibold text-white">Starter</h3>
           <p class="text-3xl font-bold mt-2">$0<span class="text-base font-normal"> / month</span></p>
-          <p class="text-sm text-gray-600 mt-3">Basic analytics dashboard and limited API calls. Ideal for pilots and startups.</p>
+          <p class="text-sm text-gray-400 mt-3">Basic analytics dashboard and limited API calls. Ideal for pilots and startups.</p>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white border rounded-2xl shadow-sm hover:shadow-md transition p-6">
-          <h3 class="text-lg font-semibold">Pro</h3>
+        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
+          <h3 class="text-lg font-semibold text-white">Pro</h3>
           <p class="text-3xl font-bold mt-2">$299<span class="text-base font-normal"> / month</span></p>
-          <p class="text-sm text-gray-600 mt-3">Full access to emissions intelligence and predictive modules, plus priority support.</p>
+          <p class="text-sm text-gray-400 mt-3">Full access to emissions intelligence and predictive modules, plus priority support.</p>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white border rounded-2xl shadow-sm hover:shadow-md transition p-6">
-          <h3 class="text-lg font-semibold">Enterprise</h3>
+        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
+          <h3 class="text-lg font-semibold text-white">Enterprise</h3>
           <p class="text-xl font-bold mt-2">Custom Quote</p>
-          <p class="text-sm text-gray-600 mt-3">Tailored deployments, on-prem integrations and SLA-backed MRV pipelines.</p>
+          <p class="text-sm text-gray-400 mt-3">Tailored deployments, on-prem integrations and SLA-backed MRV pipelines.</p>
         </div>
       </div>
 
-      <p class="text-sm text-gray-500 mt-10">
+      <p class="text-sm text-gray-300 mt-10">
         All plans include AI + IoT data processing and MRV-grade reporting. 
         Contact us for enterprise integrations or research partnerships.
       </p>
@@ -143,41 +174,41 @@
   </section>
 
   <!-- Team -->
-  <section id="team" class="border-t bg-white">
+  <section id="team" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <h2 class="text-2xl font-bold text-center">Founding Team</h2>
-      <p class="text-gray-600 mt-2 text-center">Three co-founders combining technology, geospatial analytics and product execution.</p>
+      <p class="text-gray-400 mt-2 text-center">Three co-founders combining technology, geospatial analytics and product execution.</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         
         <!-- Harit -->
-        <article class="p-6 bg-white border rounded-2xl shadow-sm flex flex-col items-center text-center">
-          <img src="./team/harit.jpg" alt="Harit Soni" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border" />
-          <h3 class="mt-4 text-lg font-semibold">Harit Soni</h3>
-          <p class="text-blue-700 text-sm">Co-founder • Product & Partnerships</p>
-          <p class="mt-2 text-sm text-gray-600">
-            15+ years building and scaling cleantech, IoT, and AI ventures across Asia, Europe, and North America. 
-            TEDx speaker and multi-award-winning founder recognized by MIT TR35, Ashden, UNFCCC, and WWF.
+        <article class="card-dark border rounded-2xl shadow-gray-900/40 flex flex-col items-center text-center p-6">
+          <img src="./team/harit.jpg" alt="Harit Soni" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border border-gray-700" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Harit Soni</h3>
+          <p class="text-blue-300 text-sm">Co-founder • Product & Partnerships</p>
+          <p class="mt-2 text-sm text-gray-400">
+            15+ years building and scaling cleantech, IoT and AI ventures across Asia, Europe and North America. 
+            TEDx speaker and multi-award-winning founder recognized by MIT TR35, Ashden, UNFCCC and WWF.
           </p>
         </article>
 
         <!-- Johannes -->
-        <article class="p-6 bg-white border rounded-2xl shadow-sm flex flex-col items-center text-center">
-          <img src="./team/johannes.jpg" alt="Johannes Parzonka" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border" />
-          <h3 class="mt-4 text-lg font-semibold">Johannes Parzonka</h3>
-          <p class="text-blue-700 text-sm">Co-founder • Commercial</p>
-          <p class="mt-2 text-sm text-gray-600">
+        <article class="card-dark border rounded-2xl shadow-gray-900/40 flex flex-col items-center text-center p-6">
+          <img src="./team/johannes.jpg" alt="Johannes Parzonka" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border border-gray-700" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Johannes Parzonka</h3>
+          <p class="text-blue-300 text-sm">Co-founder • Commercial</p>
+          <p class="mt-2 text-sm text-gray-400">
             Entrepreneurial leader with deep experience in renewables and carbon markets. 
-            Founded a green-gas venture and led M&A and business growth across wind, PV, and biomethane sectors.
+            Founded a green-gas venture and led M&A and business growth across wind, PV and biomethane sectors.
           </p>
         </article>
 
         <!-- Caterina -->
-        <article class="p-6 bg-white border rounded-2xl shadow-sm flex flex-col items-center text-center">
-          <img src="./team/caterina.jpg" alt="Caterina Giacomelli" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border" />
-          <h3 class="mt-4 text-lg font-semibold">Caterina Giacomelli</h3>
-          <p class="text-blue-700 text-sm">Co-founder • Tech</p>
-          <p class="mt-2 text-sm text-gray-600">
-            Physicist and Data Scientist specializing in ML, signal processing, and geospatial analytics. 
+        <article class="card-dark border rounded-2xl shadow-gray-900/40 flex flex-col items-center text-center p-6">
+          <img src="./team/caterina.jpg" alt="Caterina Giacomelli" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border border-gray-700" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Caterina Giacomelli</h3>
+          <p class="text-blue-300 text-sm">Co-founder • Tech</p>
+          <p class="mt-2 text-sm text-gray-400">
+            Physicist and Data Scientist specializing in ML, signal processing and geospatial analytics. 
             Experienced in Earth Observation and risk modeling for sustainable infrastructure and climate resilience.
           </p>
         </article>
@@ -187,40 +218,41 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="border-t bg-gradient-to-b from-white to-gray-50">
+  <section id="contact" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-2xl mx-auto px-4 py-16">
       <h2 class="text-2xl font-bold text-center">Contact</h2>
-      <p class="text-center text-gray-600 mt-2">Reach out to learn more about Lumora or collaboration opportunities.</p>
-      <form action="https://formspree.io/f/your-id" method="POST" class="mt-8 bg-white border rounded-2xl shadow p-6 grid gap-4">
+      <p class="text-center text-gray-400 mt-2">Reach out to learn more about Lumora or collaboration opportunities.</p>
+
+      <form action="https://formspree.io/f/your-id" method="POST" class="mt-8 card-dark border rounded-2xl shadow p-6 grid gap-4">
         <div class="grid md:grid-cols-2 gap-4">
           <label class="grid gap-1">
             <span class="text-sm">Name</span>
             <input required type="text" name="name" autocomplete="name"
-                  class="px-3 py-2 border rounded-lg" placeholder="Jane Doe" />
+                   class="input-dark px-3 py-2 rounded-lg" placeholder="Jane Doe" />
           </label>
           <label class="grid gap-1">
             <span class="text-sm">Work email</span>
             <input required type="email" name="email" autocomplete="email"
-                  class="px-3 py-2 border rounded-lg" placeholder="name@company.com" />
+                   class="input-dark px-3 py-2 rounded-lg" placeholder="name@company.com" />
           </label>
         </div>
         <label class="grid gap-1">
           <span class="text-sm">Company / Org</span>
           <input type="text" name="company" autocomplete="organization"
-                class="px-3 py-2 border rounded-lg" placeholder="Lumora S.p.A." />
+                 class="input-dark px-3 py-2 rounded-lg" placeholder="Lumora S.p.A." />
         </label>
         <label class="grid gap-1">
           <span class="text-sm">Message</span>
-          <textarea required name="message" rows="4" class="px-3 py-2 border rounded-lg" placeholder="Briefly describe your interest"></textarea>
+          <textarea required name="message" rows="4" class="input-dark px-3 py-2 rounded-lg" placeholder="Briefly describe your interest"></textarea>
         </label>
-        <div class="flex items-center gap-2 text-xs text-gray-500">
-          <input id="gdpr" type="checkbox" required class="w-4 h-4 border rounded" />
+        <div class="flex items-center gap-2 text-xs text-gray-300">
+          <input id="gdpr" type="checkbox" required class="w-4 h-4 rounded border border-gray-700 bg-gray-900" />
           <label for="gdpr">I agree to be contacted about this request.</label>
         </div>
-        <button type="submit" class="mt-2 bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700">Send</button>
+        <button type="submit" class="mt-2 px-5 py-3 rounded-xl btn-glow">Send</button>
       </form>
 
-      <div class="mt-8 text-center text-sm text-gray-600">
+      <div class="mt-8 text-center text-sm text-gray-400">
         <p>Emails:</p>
         <p><a href="mailto:harit@lumora.email" class="underline">harit@lumora.email</a> • <a href="mailto:johannes@lumora.email" class="underline">johannes@lumora.email</a> • <a href="mailto:caterina@lumora.email" class="underline">caterina@lumora.email</a></p>
         <p class="mt-3">LinkedIn:</p>
@@ -230,8 +262,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <footer class="border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© <span id="year"></span> Lumora. All rights reserved.</p>
       <div class="flex gap-4">
         <a href="#" class="hover:underline">Privacy</a>
@@ -240,6 +272,7 @@
       </div>
     </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
