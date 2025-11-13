@@ -272,7 +272,7 @@
   </script>
 
   <!-- Terms & Conditions Modal -->
-  <section id="terms" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+  <section id="terms" role="dialog" aria-modal="true" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
     <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl max-w-lg text-gray-200 relative">
       <button onclick="document.getElementById('terms').classList.add('hidden')" class="absolute top-2 right-2 text-gray-400 hover:text-white">✕</button>
       <h2 class="text-xl font-bold mb-2">Terms & Conditions</h2>
@@ -287,7 +287,10 @@
   <script>
     document.querySelector('a[href="#terms"]').addEventListener('click', e => {
       e.preventDefault();
-      document.getElementById('terms').classList.remove('hidden');
+      document.getElementById('terms').addEventListener('click', e => {
+        if (e.target.id === 'terms') e.target.classList.add('hidden');
+      });
+      ;
     });
   </script>
 
