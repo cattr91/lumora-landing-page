@@ -272,7 +272,7 @@
     <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© <span id="year"></span> Lumora. All rights reserved.</p>
       <div class="flex gap-4">
-        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#privacy" class="hover:underline">Privacy</a>
         <a id="open-terms" href="#terms" class="hover:underline">Terms &amp; Conditions</a>
         <a href="#contact" class="hover:underline">Contact</a>
       </div>
@@ -282,6 +282,20 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Privacy -->
+  <section id="privacy" role="dialog" aria-modal="true"
+          class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl max-w-lg text-gray-200 relative">
+      <button id="privacy-close" class="absolute top-2 right-2 text-gray-400 hover:text-white" aria-label="Close privacy">✕</button>
+      <h2 class="text-xl font-bold mb-2">Privacy Policy</h2>
+      <p class="text-sm">
+        We collect only the information you submit voluntarily through our contact form.
+        Your data is used solely to respond to inquiries and is not shared with third parties.
+        By using this site, you agree to this data handling practice.
+      </p>
+    </div>
+  </section>
 
   <!-- Terms & Conditions Modal -->
   <section id="terms" role="dialog" aria-modal="true"
@@ -298,27 +312,49 @@
   </section>
 
   <script>
-    // Open/close Terms modal: supports multiple links, ESC, and click-away
-    document.addEventListener('DOMContentLoaded', () => {
-      const modal   = document.getElementById('terms');
-      const openers = document.querySelectorAll('a[href="#terms"], #open-terms');
-      const closeBtn= document.getElementById('terms-close');
+    // Set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      openers.forEach(el => el.addEventListener('click', (e) => {
+    // Open/close Terms & Privacy modals
+    document.addEventListener('DOMContentLoaded', () => {
+      // Terms
+      const termsModal   = document.getElementById('terms');
+      const termsOpeners = document.querySelectorAll('a[href="#terms"], #open-terms');
+      const termsClose   = document.getElementById('terms-close');
+
+      termsOpeners.forEach(el => el.addEventListener('click', (e) => {
         e.preventDefault();
-        modal.classList.remove('hidden');
+        termsModal.classList.remove('hidden');
       }));
 
-      if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+      if (termsClose) termsClose.addEventListener('click', () => termsModal.classList.add('hidden'));
 
-      // Click outside content to close
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.classList.add('hidden');
+      termsModal.addEventListener('click', (e) => {
+        if (e.target === termsModal) termsModal.classList.add('hidden');
       });
 
-      // Escape key closes
+      // Privacy
+      const privacyModal   = document.getElementById('privacy');
+      const privacyOpeners = document.querySelectorAll('a[href="#privacy"]');
+      const privacyClose   = document.getElementById('privacy-close');
+
+      privacyOpeners.forEach(el => el.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.classList.remove('hidden');
+      }));
+
+      if (privacyClose) privacyClose.addEventListener('click', () => privacyModal.classList.add('hidden'));
+
+      privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) privacyModal.classList.add('hidden');
+      });
+
+      // Escape key closes both
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.classList.add('hidden');
+        if (e.key === 'Escape') {
+          termsModal.classList.add('hidden');
+          privacyModal.classList.add('hidden');
+        }
       });
     });
   </script>
