@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +25,6 @@
     .fade-in { animation: fade 0.6s ease-in-out both; }
     @keyframes fade { from {opacity:.0; transform: translateY(6px)} to {opacity:1; transform:none} }
     @media (prefers-reduced-motion: reduce) { .fade-in { animation: none !important; } }
-
     body {
       background-color: #111827; /* gray-900 */
       color: #f3f4f6;            /* gray-100 */
@@ -60,6 +60,14 @@
     .btn-outline:hover {
       background: rgba(255,255,255,.06);
       box-shadow: 0 6px 20px rgba(255,255,255,.08);
+    }
+    #terms {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #terms:not(.hidden) {
+      opacity: 1;
+      display: flex;
     }
   </style>
 </head>
@@ -274,5 +282,37 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <footer class="border-gray-800-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-400">
+      <p>© <span id="year"></span> Lumora. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#terms" class="hover:text-blue-400">Terms & Conditions</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Terms & Conditions Modal -->
+  <section id="terms" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+    <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl max-w-lg text-gray-200 relative">
+      <button onclick="document.getElementById('terms').classList.add('hidden')" class="absolute top-2 right-2 text-gray-400 hover:text-white">✕</button>
+      <h2 class="text-xl font-bold mb-2">Terms & Conditions</h2>
+      <p class="text-sm">
+        The content provided on this site is for informational purposes only and does not constitute a binding offer.  
+        Lumora disclaims all liability for damages arising from the use of this site.  
+        By using this site, you agree to comply with applicable laws and regulations.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    document.querySelector('a[href="#terms"]').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('terms').classList.remove('hidden');
+    });
+  </script>
+
 </body>
+
 </html>
