@@ -269,14 +269,14 @@
 
   <!-- Footer -->
   <footer class="border-t">
-  <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <p>© <span id="year"></span> Lumora. All rights reserved.</p>
-  <div class="flex gap-4">
-  <a href="#" class="hover:underline">Privacy</a>
-  <a href="#" class="hover:underline">Terms</a>
-  <a href="#contact" class="hover:underline">Contact</a>
-  </div>
-  </div>
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© <span id="year"></span> Lumora. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:underline">Privacy</a>
+        <a id="open-terms" href="#terms" class="hover:underline">Terms &amp; Conditions</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -285,10 +285,10 @@
 
   <!-- Terms & Conditions Modal -->
   <section id="terms" role="dialog" aria-modal="true"
-          class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+          class="fixed inset-0 bg-black/70 hidden justify-center items-center z-[999]">
     <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl max-w-lg text-gray-200 relative">
       <button id="terms-close" class="absolute top-2 right-2 text-gray-400 hover:text-white" aria-label="Close terms">✕</button>
-      <h2 class="text-xl font-bold mb-2">Terms & Conditions</h2>
+      <h2 class="text-xl font-bold mb-2">Terms &amp; Conditions</h2>
       <p class="text-sm">
         The content provided on this site is for informational purposes only and does not constitute a binding offer.
         Lumora disclaims all liability for damages arising from the use of this site.
@@ -300,16 +300,14 @@
   <script>
     // Open/close Terms modal: supports multiple links, ESC, and click-away
     document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('terms');
+      const modal   = document.getElementById('terms');
       const openers = document.querySelectorAll('a[href="#terms"], #open-terms');
-      const closeBtn = document.getElementById('terms-close');
+      const closeBtn= document.getElementById('terms-close');
 
-      if (openers.length) {
-        openers.forEach(el => el.addEventListener('click', (e) => {
-          e.preventDefault();
-          modal.classList.remove('hidden');
-        }));
-      }
+      openers.forEach(el => el.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.remove('hidden');
+      }));
 
       if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
 
