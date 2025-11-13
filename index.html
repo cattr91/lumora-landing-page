@@ -69,6 +69,12 @@
       opacity: 1;
       display: flex;
     }
+    #privacy.hidden {
+      display: none !important;
+    }
+    #privacy {
+      display: flex !important;
+    }
   </style>
 </head>
 
@@ -285,7 +291,8 @@
 
   <!-- Privacy -->
   <section id="privacy" role="dialog" aria-modal="true"
-          class="fixed inset-0 bg-black/70 hidden justify-center items-center z-[999]">
+          class="fixed inset-0 bg-black/70 hidden z-[999]"
+          style="display:flex; justify-content:center; align-items:center;">
     <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl max-w-lg text-gray-200 relative">
       <button id="privacy-close" class="absolute top-2 right-2 text-gray-400 hover:text-white" aria-label="Close privacy">✕</button>
       <h2 class="text-xl font-bold mb-2">Privacy Policy</h2>
