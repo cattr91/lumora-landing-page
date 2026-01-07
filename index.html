@@ -5,14 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lumora • AI + IoT-powered infrastructure decarbonization</title>
-  <meta name="description" content="Lumora uses AI and IoT to decarbonize infrastructure by turning monitoring data into actionable emissions reductions." />
+  <meta name="description" content="Lumora uses AI, IoT and operational data to reduce energy waste, optimize utilities, recover waste heat and unlock DSM-based decarbonization in industry." />
   <link rel="icon" type="image/png" href="lumora.png" sizes="32x32">
   <link rel="apple-touch-icon" href="lumora.png">
   <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#0EA5E9">
   <!-- Social preview -->
   <meta property="og:title" content="Lumora • AI + IoT-powered infrastructure decarbonization">
-  <meta property="og:description" content="We fuse satellite, in-situ sensors and ops data to cut emissions across critical infrastructure.">
+  <meta property="og:description" content="We fuse industrial utilities data, IoT sensors and operational data to cut energy waste, recover heat and enable DSM across critical infrastructure.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://cattr91.github.io/lumora-landing-page/img/hero-bg.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
     .input-dark {
       background-color: #111827; /* gray-900 */
       color: #f3f4f6;            /* gray-100 */
-      border: 1px solid #374151; /* gray-700 */
+      border: 1 solid #374151; /* gray-700 */
     }
     .input-dark::placeholder { color: #9CA3AF; } /* gray-400 */
     .btn-glow {
@@ -88,7 +88,6 @@
       </a>
       <nav class="hidden sm:flex gap-6 text-sm" aria-label="Primary">
         <a href="#what" class="hover:text-blue-300">Services</a>
-        <a href="#pricing" class="hover:text-blue-300">Prices</a>
         <a href="#team" class="hover:text-blue-300">Team</a>
         <a href="#contact" class="hover:text-blue-300">Contact</a>
       </nav>
@@ -99,17 +98,23 @@
   <!-- Hero -->
   <section id="top" class="relative isolate border-b border-gray-800">
     <div class="absolute inset-0 -z-10">
-      <img src="./img/hero-bg.png" alt="Solar and grid infrastructure at dusk" class="w-full h-full object-cover" fetchpriority="high">
+      <img src="./img/hero-bg.png" alt="Industrial infrastructure and energy systems" class="w-full h-full object-cover" fetchpriority="high">
       <div class="absolute inset-0 bg-black/70"></div>
     </div>
     <div class="max-w-6xl mx-auto px-4 py-32 text-white">
       <div class="max-w-3xl fade-in">
         <h1 class="text-5xl font-bold leading-tight">Lumora</h1>
         <p class="mt-3 text-2xl font-medium text-blue-200">AI + IoT-powered infrastructure decarbonization</p>
-        <p class="mt-4 text-lg text-gray-200">We fuse satellite, in-situ sensors and operational data to identify, quantify and reduce emissions across critical infrastructure.</p>
+        <p class="mt-4 text-lg text-gray-200">
+          We fuse industrial utilities data, IoT sensors and operational data to reduce energy waste, recover heat
+          and unlock DSM-based decarbonization across energy-intensive infrastructure.
+        </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#what" class="inline-block px-6 py-3 rounded-xl btn-glow">Explore services</a>
-          <a href="#pricing" class="inline-block px-6 py-3 rounded-xl btn-outline">See pricing</a>
+          <a href="https://forms.gle/uBw6YdRs3TA3fttaA" target="_blank" rel="noopener"
+             class="inline-block px-6 py-3 rounded-xl btn-outline">
+            Industrial decarbonization form
+          </a>
         </div>
       </div>
     </div>
@@ -119,84 +124,66 @@
   <section id="what" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-16 text-center">
       <h2 class="text-2xl font-bold">Our Services</h2>
-      <p class="text-gray-400 mt-2">We combine geospatial analytics, IoT data and AI to accelerate infrastructure decarbonization.</p>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1 -->
-        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service1.png" alt="Emissions intelligence" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Emissions Intelligence</h3>
-          <p class="text-sm text-gray-400 mt-2">Portfolio-scale insights on carbon, methane and electrification potential using multi-source data.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service2.png" alt="Predictive maintenance" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Predictive Maintenance</h3>
-          <p class="text-sm text-gray-400 mt-2">AI models forecast infrastructure stress, helping reduce downtime and extend asset life.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service3.png" alt="MRV-grade reporting" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">MRV-Grade Reporting</h3>
-          <p class="text-sm text-gray-400 mt-2">Automated, audit-ready reports compatible with sustainability frameworks and regulators.</p>
-        </div>
-        <!-- Card 4 -->
-        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service4.png" alt="Optimization actions" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Optimization Actions</h3>
-          <p class="text-sm text-gray-400 mt-2">Translate insights into real-world actions: retrofits, grid balancing and efficiency upgrades.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing" class="border-t border-gray-800 bg-gray-950">
-    <div class="max-w-6xl mx-auto px-4 py-16 text-center">
-      <h2 class="text-2xl font-bold">Pricing Model</h2>
-      <p class="text-gray-400 mt-2">Flexible options designed to match client scale and data maturity.</p>
-
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
-          <h3 class="text-lg font-semibold text-white">Starter</h3>
-          <p class="text-3xl font-bold mt-2">$0<span class="text-base font-normal"> / month</span></p>
-          <p class="text-sm text-gray-400 mt-3">Basic analytics dashboard and limited API calls. Ideal for pilots and startups.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
-          <h3 class="text-lg font-semibold text-white">Pro</h3>
-          <p class="text-3xl font-bold mt-2">$299<span class="text-base font-normal"> / month</span></p>
-          <p class="text-sm text-gray-400 mt-3">Full access to emissions intelligence and predictive modules, plus priority support.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card-dark border rounded-2xl hover:shadow-blue-500/20 transition p-6">
-          <h3 class="text-lg font-semibold text-white">Enterprise</h3>
-          <p class="text-xl font-bold mt-2">Custom Quote</p>
-          <p class="text-sm text-gray-400 mt-3">Tailored deployments, on-prem integrations and SLA-backed MRV pipelines.</p>
-        </div>
-      </div>
-
-      <p class="text-sm text-gray-300 mt-10">
-        All plans include AI + IoT data processing and MRV-grade reporting. 
-        Contact us for enterprise integrations or research partnerships.
+      <p class="text-gray-400 mt-2">
+        We focus on industrial utilities, waste heat and DSM to turn existing assets into decarbonization levers.
       </p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Utilities -->
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service1.png" alt="Utilities and energy baseline" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Utilities &amp; Energy Baseline</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            Structured baseline for gas, electricity and water: from quick diagnostic to detailed breakdown of
+            loads, tariffs and savings potential.
+          </p>
+        </div>
+        <!-- Card 2: Operational inefficiencies -->
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service2.png" alt="Operational inefficiencies and ancillary systems" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Operational Inefficiencies</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            Identify processes that don’t need to run and hidden losses in ancillary systems such as compressed air
+            and industrial gases, pumps and fans.
+          </p>
+        </div>
+        <!-- Card 3: Waste heat -->
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service3.png" alt="Waste heat and heat recovery" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">Waste Heat &amp; Recovery</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            Map and quantify waste heat across your site, prioritize recovery options and assess business cases for
+            heat pumps, ORC and other retrofit solutions.
+          </p>
+        </div>
+        <!-- Card 4: DSM -->
+        <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
+          <img src="./img/service4.png" alt="DSM and flexible power tariffs" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
+          <h3 class="mt-4 text-lg font-semibold text-white">DSM &amp; Flexible Tariffs</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            Turn flexible loads into assets: DSM / demand response strategies, alignment with flexible power tariffs
+            and integration of on-site flexibility (e.g. PSA, storage).
+          </p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- (Pricing removed) -->
 
   <!-- Team -->
   <section id="team" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <h2 class="text-2xl font-bold text-center">Founding Team</h2>
-      <p class="text-gray-400 mt-2 text-center">Three co-founders combining technology, geospatial analytics and product execution.</p>
+      <p class="text-gray-400 mt-2 text-center">
+        Three co-founders combining industrial decarbonization, geospatial analytics and product execution.
+      </p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         
         <!-- Harit -->
         <article class="card-dark border rounded-2xl shadow-gray-900/40 flex flex-col items-center text-center p-6">
           <img src="./team/harit.jpg" alt="Harit Soni" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border border-gray-700" />
           <h3 class="mt-4 text-lg font-semibold text-white">Harit Soni</h3>
-          <p class="text-blue-300 text-sm">Co-founder • Product & Partnerships</p>
+          <p class="text-blue-300 text-sm">Co-founder • Product &amp; Partnerships</p>
           <p class="mt-2 text-sm text-gray-400">
             15+ years building and scaling cleantech, IoT and AI ventures across Asia, Europe and North America. 
             TEDx speaker and multi-award-winning founder recognized by MIT TR35, Ashden, UNFCCC and WWF.
@@ -210,7 +197,7 @@
           <p class="text-blue-300 text-sm">Co-founder • Commercial</p>
           <p class="mt-2 text-sm text-gray-400">
             Entrepreneurial leader with deep experience in renewables and carbon markets. 
-            Founded a green-gas venture and led M&A and business growth across wind, PV and biomethane sectors.
+            Founded a green-gas venture and led M&amp;A and business growth across wind, PV and biomethane sectors.
           </p>
         </article>
 
@@ -221,7 +208,7 @@
           <p class="text-blue-300 text-sm">Co-founder • Tech</p>
           <p class="mt-2 text-sm text-gray-400">
             Physicist and Data Scientist specializing in ML, signal processing and geospatial analytics. 
-            Experienced in Earth Observation and risk modeling for sustainable infrastructure and climate resilience.
+            Experienced in Earth Observation and risk modeling for sustainable infrastructure and industrial decarbonization.
           </p>
         </article>
 
@@ -233,7 +220,16 @@
   <section id="contact" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-2xl mx-auto px-4 py-16">
       <h2 class="text-2xl font-bold text-center">Contact</h2>
-      <p class="text-center text-gray-400 mt-2">Reach out to learn more about Lumora or collaboration opportunities.</p>
+      <p class="text-center text-gray-400 mt-2">
+        Reach out to explore industrial decarbonization opportunities or potential collaboration.
+      </p>
+
+      <div class="mt-6 text-center">
+        <a href="https://forms.gle/uBw6YdRs3TA3fttaA" target="_blank" rel="noopener"
+           class="inline-block px-5 py-3 rounded-xl btn-outline text-sm">
+          Fill our industrial decarbonization exploration form
+        </a>
+      </div>
 
       <form action="https://formspree.io/f/manaypzl" method="POST" class="mt-8 card-dark border rounded-2xl shadow p-6 grid gap-4">
         <div class="grid md:grid-cols-2 gap-4">
@@ -266,9 +262,17 @@
 
       <div class="mt-8 text-center text-sm text-gray-400">
         <p>Emails:</p>
-        <p><a href="mailto:harit@lumora.email" class="underline">harit@lumora.email</a> • <a href="mailto:johannes@lumora.email" class="underline">johannes@lumora.email</a> • <a href="mailto:caterina@lumora.email" class="underline">caterina@lumora.email</a></p>
+        <p>
+          <a href="mailto:harit@lumora.email" class="underline">harit@lumora.email</a> • 
+          <a href="mailto:johannes@lumora.email" class="underline">johannes@lumora.email</a> • 
+          <a href="mailto:caterina@lumora.email" class="underline">caterina@lumora.email</a>
+        </p>
         <p class="mt-3">LinkedIn:</p>
-        <p><a href="https://www.linkedin.com/in/harit-soni-b837a5/" class="underline">Harit Soni</a> • <a href="https://www.linkedin.com/in/jparzonka/" class="underline">Johannes Parzonka</a> • <a href="https://www.linkedin.com/in/catgi91/" class="underline">Caterina Giacomelli</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/harit-soni-b837a5/" class="underline">Harit Soni</a> • 
+          <a href="https://www.linkedin.com/in/jparzonka/" class="underline">Johannes Parzonka</a> • 
+          <a href="https://www.linkedin.com/in/catgi91/" class="underline">Caterina Giacomelli</a>
+        </p>
       </div>
     </div>
   </section>
