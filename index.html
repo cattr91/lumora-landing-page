@@ -4,20 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lumora • AI + IoT-powered infrastructure decarbonization</title>
-  <meta name="description" content="Lumora uses AI, IoT and operational data to reduce energy waste, optimize utilities, recover waste heat and unlock DSM-based decarbonization in industry." />
+  <title>Lumora • AI-powered utility intelligence for data centers</title>
+  <meta name="description" content="Lumora uses AI and operational data to detect inefficiencies in data center cooling, power and compressed air systems and surface ranked recommendations to operators." />
   <link rel="icon" type="image/png" href="lumora.png" sizes="32x32">
   <link rel="apple-touch-icon" href="lumora.png">
   <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#0EA5E9">
-  <!-- Social preview -->
-  <meta property="og:title" content="Lumora • AI + IoT-powered infrastructure decarbonization">
-  <meta property="og:description" content="We fuse industrial utilities data, IoT sensors and operational data to cut energy waste, recover heat and enable DSM across critical infrastructure.">
+  <meta property="og:title" content="Lumora • AI-powered utility intelligence for data centers">
+  <meta property="og:description" content="We use AI and operational data to reduce energy waste in data center cooling, power and compressed air, starting with chilled water setpoint optimisation.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cattr91.github.io/lumora-landing-page/img/hero-bg.jpg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Preload hero -->
-  <link rel="preload" as="image" href="./img/hero-bg.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -26,36 +23,36 @@
     @keyframes fade { from {opacity:.0; transform: translateY(6px)} to {opacity:1; transform:none} }
     @media (prefers-reduced-motion: reduce) { .fade-in { animation: none !important; } }
     body {
-      background-color: #111827; /* gray-900 */
-      color: #f3f4f6;            /* gray-100 */
+      background-color: #111827;
+      color: #f3f4f6;
     }
-    section { border-color: #1f2937; /* gray-800 */ }
+    section { border-color: #1f2937; }
     .card-dark {
-      background-color: #1f2937; /* gray-800 */
-      border-color: #374151;     /* gray-700 */
+      background-color: #1f2937;
+      border-color: #374151;
       color: #f3f4f6;
     }
     .input-dark {
-      background-color: #111827; /* gray-900 */
-      color: #f3f4f6;            /* gray-100 */
-      border: 1 solid #374151; /* gray-700 */
+      background-color: #111827;
+      color: #f3f4f6;
+      border: 1px solid #374151;
     }
-    .input-dark::placeholder { color: #9CA3AF; } /* gray-400 */
+    .input-dark::placeholder { color: #9CA3AF; }
     .btn-glow {
-      background-color:#0EA5E9; /* sky-500-ish */
+      background-color:#0EA5E9;
       color: #fff;
       box-shadow: 0 0 0 0 rgba(14,165,233,0.0);
       transition: box-shadow .25s ease, transform .05s ease, background-color .2s ease;
     }
     .btn-glow:hover {
-      background-color:#38BDF8; /* sky-400-ish */
+      background-color:#38BDF8;
       box-shadow: 0 8px 28px rgba(14,165,233,0.25);
     }
     .btn-glow:active { transform: translateY(1px); }
     .btn-outline {
       border: 1px solid rgba(255,255,255,.15);
       background: transparent;
-      color: #E5E7EB; /* gray-200 */
+      color: #E5E7EB;
     }
     .btn-outline:hover {
       background: rgba(255,255,255,.06);
@@ -87,7 +84,7 @@
         <span class="font-semibold">Lumora</span>
       </a>
       <nav class="hidden sm:flex gap-6 text-sm" aria-label="Primary">
-        <a href="#what" class="hover:text-blue-300">Services</a>
+        <a href="#what" class="hover:text-blue-300">Capabilities</a>
         <a href="#team" class="hover:text-blue-300">Team</a>
         <a href="#contact" class="hover:text-blue-300">Contact</a>
       </nav>
@@ -98,95 +95,120 @@
   <!-- Hero -->
   <section id="top" class="relative isolate border-b border-gray-800">
     <div class="absolute inset-0 -z-10">
-      <img src="./img/hero-bg.png" alt="Industrial infrastructure and energy systems" class="w-full h-full object-cover" fetchpriority="high">
+      <img
+        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80"
+        alt="Data center server rows"
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+      >
       <div class="absolute inset-0 bg-black/70"></div>
     </div>
     <div class="max-w-6xl mx-auto px-4 py-32 text-white">
       <div class="max-w-3xl fade-in">
         <h1 class="text-5xl font-bold leading-tight">Lumora</h1>
-        <p class="mt-3 text-2xl font-medium text-blue-200">AI + IoT-powered infrastructure decarbonization</p>
+        <p class="mt-3 text-2xl font-medium text-blue-200">AI-powered utility intelligence for data centers</p>
         <p class="mt-4 text-lg text-gray-200">
-          We fuse industrial utilities data, IoT sensors and operational data to reduce energy waste, recover heat
-          and unlock DSM-based decarbonization across energy-intensive infrastructure.
+          We use AI and operational data to detect inefficiencies in data center cooling, power and compressed air systems
+          and surface ranked recommendations to operators. Start with chilled water. Scale across the stack.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#what" class="inline-block px-6 py-3 rounded-xl btn-glow">Explore services</a>
-          <a href="https://forms.gle/uBw6YdRs3TA3fttaA" target="_blank" rel="noopener"
-             class="inline-block px-6 py-3 rounded-xl btn-outline">
-            Industrial decarbonization form
+          <a href="#what" class="inline-block px-6 py-3 rounded-xl btn-glow">Explore capabilities</a>
+          <a href="#contact" class="inline-block px-6 py-3 rounded-xl btn-outline">
+            Request a pilot
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services (as cards) -->
+  <!-- Capabilities (as cards) -->
   <section id="what" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-16 text-center">
-      <h2 class="text-2xl font-bold">Our Services</h2>
+      <h2 class="text-2xl font-bold">Our Capabilities</h2>
       <p class="text-gray-400 mt-2">
-        We focus on industrial utilities, waste heat and DSM to turn existing assets into decarbonization levers.
-        <!-- This includes ancillary processes such as compressed air, industrial gases, pumping systems, cooling loops and other balance-of-plant loads that drive hidden energy waste. -->
+        We focus on the utility systems that drive energy waste in data centers: cooling, power and on-site energy assets. No new hardware. We work with your existing operational data and infrastructure signals.
       </p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1: Utilities -->
+
+        <!-- Card 1: Chilled Water -->
         <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service1.png" alt="Utilities and energy baseline" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Utilities &amp; Energy Baseline</h3>
+          <img
+            src="https://images.unsplash.com/photo-1527738697320-513f6648bc26?auto=format&fit=crop&w=640&h=320&q=80"
+            alt="Chilled water cooling plant"
+            width="640" height="320" loading="lazy"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 class="mt-4 text-lg font-semibold text-white">Chilled Water Optimisation</h3>
           <p class="text-sm text-gray-400 mt-2">
-            Structured baseline for gas, electricity and water: from quick diagnostic to detailed breakdown of
-            loads, tariffs and savings potential.
+            Setpoints fixed at commissioning and never revisited. Lumora detects headroom and recommends
+            safe upward adjustments, reducing compressor load without thermal risk.
           </p>
         </div>
-        <!-- Card 2: Operational inefficiencies -->
+
+        <!-- Card 2: CRAH / Airflow -->
         <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service2.png" alt="Operational inefficiencies and ancillary systems" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Operational Inefficiencies</h3>
+          <img
+            src="https://images.unsplash.com/photo-1762163516269-3c143e04175c?auto=format&fit=crop&w=640&h=320&q=80"
+            alt="Data center CRAH units and airflow"
+            width="640" height="320" loading="lazy"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 class="mt-4 text-lg font-semibold text-white">CRAH & Airflow</h3>
           <p class="text-sm text-gray-400 mt-2">
-            Identify processes that don’t need to run and hidden losses in ancillary systems such as compressed air
-            and industrial gases, pumps and fans.
+            Detect recirculation hot spots, over-cooling conditions and fan inefficiencies across computer
+            room air handlers. Ranked recommendations on supply temperature and airflow balance.
           </p>
         </div>
-        <!-- Card 3: Waste heat -->
+
+        <!-- Card 3: Power & PUE -->
         <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service3.png" alt="Waste heat and heat recovery" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">Waste Heat &amp; Recovery</h3>
+          <img
+            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=640&h=320&q=80"
+            alt="Power infrastructure and energy monitoring"
+            width="640" height="320" loading="lazy"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 class="mt-4 text-lg font-semibold text-white">Power Draw & PUE</h3>
           <p class="text-sm text-gray-400 mt-2">
-            Map and quantify waste heat across your site, prioritize recovery options and assess business cases for
-            heat pumps, ORC and other retrofit solutions.
+            Continuous monitoring of IT load versus facility overhead. Identifies UPS inefficiency windows,
+            PDU load imbalance and operational levers to improve PUE.
           </p>
         </div>
-        <!-- Card 4: DSM -->
+
+        <!-- Card 4: On-site Energy Orchestration -->
         <div class="card-dark border rounded-2xl shadow-gray-900/40 overflow-hidden hover:shadow-blue-500/20 transition p-4">
-          <img src="./img/service4.png" alt="DSM and flexible power tariffs" width="640" height="320" loading="lazy" class="w-full h-40 object-cover rounded-lg" />
-          <h3 class="mt-4 text-lg font-semibold text-white">DSM &amp; Flexible Tariffs</h3>
+          <img
+            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=640&h=320&q=80"
+            alt="Flexibility and on-site energy assets"
+            width="640" height="320" loading="lazy"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 class="mt-4 text-lg font-semibold text-white">Energy Orchestration</h3>
           <p class="text-sm text-gray-400 mt-2">
-            Turn flexible loads into assets: DSM / demand response strategies, alignment with flexible power tariffs
-            and integration of on-site flexibility (e.g. PSA, storage).
+            Data centers increasingly operate behind-the-meter assets: BESS, generators, solar and wind. Lumora reads signals across these and grid consumption to surface dispatch recommendations, turning sunk capex into active flexibility.
           </p>
         </div>
+
       </div>
     </div>
   </section>
-
-  <!-- (Pricing removed) -->
 
   <!-- Team -->
   <section id="team" class="border-t border-gray-800 bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <h2 class="text-2xl font-bold text-center">Founding Team</h2>
       <p class="text-gray-400 mt-2 text-center">
-        Three co-founders combining industrial decarbonization, geospatial analytics and product execution.
+        Three co-founders combining ML, energy infrastructure and commercial execution.
       </p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        
+
         <!-- Harit -->
         <article class="card-dark border rounded-2xl shadow-gray-900/40 flex flex-col items-center text-center p-6">
           <img src="./team/harit.jpg" alt="Harit Soni" width="224" height="224" loading="lazy" class="w-28 h-28 rounded-full object-cover border border-gray-700" />
           <h3 class="mt-4 text-lg font-semibold text-white">Harit Soni</h3>
           <p class="text-blue-300 text-sm">Co-founder • Product &amp; Partnerships</p>
           <p class="mt-2 text-sm text-gray-400">
-            15+ years building and scaling cleantech, IoT and AI ventures across Asia, Europe and North America. 
+            15+ years building and scaling cleantech, IoT and AI ventures across Asia, Europe and North America.
             TEDx speaker and multi-award-winning founder recognized by MIT TR35, Ashden, UNFCCC and WWF.
           </p>
         </article>
@@ -197,7 +219,7 @@
           <h3 class="mt-4 text-lg font-semibold text-white">Johannes Parzonka</h3>
           <p class="text-blue-300 text-sm">Co-founder • Commercial</p>
           <p class="mt-2 text-sm text-gray-400">
-            Entrepreneurial leader with deep experience in renewables and carbon markets. 
+            Entrepreneurial leader with deep experience in renewables and carbon markets.
             Founded a green-gas venture and led M&amp;A and business growth across wind, PV and biomethane sectors.
           </p>
         </article>
@@ -208,8 +230,8 @@
           <h3 class="mt-4 text-lg font-semibold text-white">Caterina Giacomelli</h3>
           <p class="text-blue-300 text-sm">Co-founder • Tech</p>
           <p class="mt-2 text-sm text-gray-400">
-            Physicist and Data Scientist specializing in ML, signal processing and geospatial analytics. 
-            Experienced in Earth Observation and risk modeling for sustainable infrastructure and industrial decarbonization.
+            Physicist and Data Scientist specializing in ML, signal processing and anomaly detection.
+            Experienced in energy infrastructure and predictive modelling for data center operations.
           </p>
         </article>
 
@@ -222,15 +244,9 @@
     <div class="max-w-2xl mx-auto px-4 py-16">
       <h2 class="text-2xl font-bold text-center">Contact</h2>
       <p class="text-center text-gray-400 mt-2">
-        Reach out to explore industrial decarbonization opportunities or potential collaboration.
+        We're working with data center operators on early pilots. If you're running a facility and curious
+        about what your historian data could tell you, reach out.
       </p>
-
-      <div class="mt-6 text-center">
-        <a href="https://forms.gle/uBw6YdRs3TA3fttaA" target="_blank" rel="noopener"
-           class="inline-block px-5 py-3 rounded-xl btn-outline text-sm">
-          Fill our industrial decarbonization exploration form
-        </a>
-      </div>
 
       <form action="https://formspree.io/f/manaypzl" method="POST" class="mt-8 card-dark border rounded-2xl shadow p-6 grid gap-4">
         <div class="grid md:grid-cols-2 gap-4">
@@ -248,11 +264,11 @@
         <label class="grid gap-1">
           <span class="text-sm">Company / Org</span>
           <input type="text" name="company" autocomplete="organization"
-                 class="input-dark px-3 py-2 rounded-lg" placeholder="Lumora S.p.A." />
+                 class="input-dark px-3 py-2 rounded-lg" placeholder="e.g. Equinix, Aruba, Digital Realty" />
         </label>
         <label class="grid gap-1">
           <span class="text-sm">Message</span>
-          <textarea required name="message" rows="4" class="input-dark px-3 py-2 rounded-lg" placeholder="Briefly describe your interest"></textarea>
+          <textarea required name="message" rows="4" class="input-dark px-3 py-2 rounded-lg" placeholder="Describe your facility, data availability, or what you'd like to explore"></textarea>
         </label>
         <div class="flex items-center gap-2 text-xs text-gray-300">
           <input id="gdpr" type="checkbox" required class="w-4 h-4 rounded border border-gray-700 bg-gray-900" />
@@ -264,14 +280,14 @@
       <div class="mt-8 text-center text-sm text-gray-400">
         <p>Emails:</p>
         <p>
-          <a href="mailto:harit@lumora.email" class="underline">harit@lumora.email</a> • 
-          <a href="mailto:johannes@lumora.email" class="underline">johannes@lumora.email</a> • 
+          <a href="mailto:harit@lumora.email" class="underline">harit@lumora.email</a> •
+          <a href="mailto:johannes@lumora.email" class="underline">johannes@lumora.email</a> •
           <a href="mailto:caterina@lumora.email" class="underline">caterina@lumora.email</a>
         </p>
         <p class="mt-3">LinkedIn:</p>
         <p>
-          <a href="https://www.linkedin.com/in/harit-soni-b837a5/" class="underline">Harit Soni</a> • 
-          <a href="https://www.linkedin.com/in/jparzonka/" class="underline">Johannes Parzonka</a> • 
+          <a href="https://www.linkedin.com/in/harit-soni-b837a5/" class="underline">Harit Soni</a> •
+          <a href="https://www.linkedin.com/in/jparzonka/" class="underline">Johannes Parzonka</a> •
           <a href="https://www.linkedin.com/in/catgi91/" class="underline">Caterina Giacomelli</a>
         </p>
       </div>
@@ -324,12 +340,9 @@
   </section>
 
   <script>
-    // Set year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Open/close Terms & Privacy modals
     document.addEventListener('DOMContentLoaded', () => {
-      // Terms
       const termsModal   = document.getElementById('terms');
       const termsOpeners = document.querySelectorAll('a[href="#terms"], #open-terms');
       const termsClose   = document.getElementById('terms-close');
@@ -345,7 +358,6 @@
         if (e.target === termsModal) termsModal.classList.add('hidden');
       });
 
-      // Privacy
       const privacyModal   = document.getElementById('privacy');
       const privacyOpeners = document.querySelectorAll('a[href="#privacy"]');
       const privacyClose   = document.getElementById('privacy-close');
@@ -361,7 +373,6 @@
         if (e.target === privacyModal) privacyModal.classList.add('hidden');
       });
 
-      // Escape key closes both
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           termsModal.classList.add('hidden');
@@ -372,5 +383,4 @@
   </script>
 
 </body>
-
 </html>
